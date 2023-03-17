@@ -6,7 +6,7 @@ import { ContactList } from './ContactList/ContactList';
 import { ContactItem } from './ContactItem/ContactItem';
 
 export const App = () => {
-  const [contacts, setContacts] = useState(getLocalContacts() ?? []);
+  const [contacts, setContacts] = useState(() => getLocalContacts() ?? []);
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
